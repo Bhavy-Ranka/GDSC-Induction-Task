@@ -11,3 +11,5 @@ Option to add new activities and delete existing ones.
 Future Enhancements: 
 User Login: Implement authentication to allow personalized habit tracking.
 Data Storage: Store habit data so users can track progress over time, even after refreshing or logging out.
+
+![gdsc](https://github.com/user-attachments/assets/8bc7994e-87e9-4055-a3b3-30223ab606dd)
