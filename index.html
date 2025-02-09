@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Habit Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1 id="title">Habit Tracker : Stay Consitent, Stay Motivated!!</h1>
+  <marquee style="color: white; font-size: 22; margin-top: 10px">
+    Habit is a cable; we weave a thread of it each day, and at last we cannot
+    break it</marquee>
+
+  <div class="login-div">
+    <input class="Login" type="text" placeholder="Enter your name :" />
+    <button>Login</button>
+  </div>
+
+  <div class="month-wrap">
+    <div class="month"  onclick="toggleData('jan')">Jan</div>
+    <div class="month" onclick="toggleData('feb')">Feb</div>
+    <div class="month" onclick="toggleData('march')">March</div>
+    <div class="month" onclick="toggleData('april')">April</div>
+    <div class="month" onclick="toggleData('may')">May</div>
+    <div class="month" onclick="toggleData('june')">June</div>
+    <div class="month" onclick="toggleData('july')">July</div>
+    <div class="month" onclick="toggleData('august')">Aug</div>
+    <div class="month" onclick="toggleData('sept')">Sept</div>
+    <div class="month" onclick="toggleData('oct')">Oct</div>
+    <div class="month" onclick="toggleData('nov')">Nov</div>
+    <div class="month" onclick="toggleData('dec')">Dec</div>
+  </div>
+
+  <!-- JANUARY -->
+  <div id="jan" class="habit-data">
+    <p style="text-align: left">JANUARY</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Activity</th>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<th>${i}</th>`);
+            }
+          </script>
+          <th>✅ Done</th>
+          <th>🗑️ Delete</th>
+        </tr>
+      </thead>
+      <tbody id="jan-table">
+        <tr>
+          <td style="color: white">🏋️ Gym</td>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td style="color: white">📖 Reading</td>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="add-activity">
+      <input type="text" id="jan-activity" placeholder="New Activity" />
+      <button onclick="addActivity('jan')">Add Activity</button>
+    </div>
+  </div>
+
+  <!--          FEB      -->
+
+  <div id="feb" class="habit-data">
+    <p style="text-align: left">FEBURARY</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Activity</th>
+         
+          <script>
+            for (let i = 1; i <= 28; i++) {
+              document.write(`<th>${i}</th>`);
+            }
+          </script>
+          <th>✅ Done</th>
+          <th>🗑️ Delete</th>
+        </tr>
+      </thead>
+      <tbody id="feb-table">
+        <tr>
+          <td style="color: white">🏋️ Gym</td>
+          <script>
+            for (let i = 1; i <= 28; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td style="color: white">📖 Reading</td>
+          <script>
+            for (let i = 1; i <= 28; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="add-activity">
+      <input type="text" id="feb-activity" placeholder="New Activity" />
+      <button onclick="addActivity('feb')">Add Activity</button>
+    </div>
+  </div>
+
+  <!--            March      -->
+
+  <div id="march" class="habit-data">
+    <p style="text-align: left">MARCH</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Activity</th>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<th>${i}</th>`);
+            }
+          </script>
+          <th>✅ Done</th>
+          <th>🗑️ Delete</th>
+        </tr>
+      </thead>
+      <tbody id="march-table">
+        <tr>
+          <td style="color: white">🏋️ Gym</td>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td style="color: white">📖 Reading</td>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="add-activity">
+      <input type="text" id="march-activity" placeholder="New Activity" />
+      <button onclick="addActivity('march')">Add Activity</button>
+    </div>
+  </div>
+
+  <!--       APRIL              -->
+
+  <div id="april" class="habit-data">
+    <p style="text-align: left">APRIL</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Activity</th>
+          <script>
+            for (let i = 1; i <= 30; i++) {
+              document.write(`<th>${i}</th>`);
+            }
+          </script>
+          <th>✅ Done</th>
+          <th>🗑️ Delete</th>
+        </tr>
+      </thead>
+      <tbody id="april-table">
+        <tr>
+          <td style="color: white">🏋️ Gym</td>
+          <script>
+            for (let i = 1; i <= 30; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td style="color: white">📖 Reading</td>
+          <script>
+            for (let i = 1; i <= 30; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="add-activity">
+      <input type="text" id="april-activity" placeholder="New Activity" />
+      <button onclick="addActivity('april')">Add Activity</button>
+    </div>
+  </div>
+
+  <!--            MAY      -->
+
+  <div id="may" class="habit-data">
+    <p style="text-align: left">MAY</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Activity</th>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<th>${i}</th>`);
+            }
+          </script>
+          <th>✅ Done</th>
+          <th>🗑️ Delete</th>
+        </tr>
+      </thead>
+      <tbody id="may-table">
+        <tr>
+          <td style="color: white">🏋️ Gym</td>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td style="color: white">📖 Reading</td>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="add-activity">
+      <input type="text" id="may-activity" placeholder="New Activity" />
+      <button onclick="addActivity('may')">Add Activity</button>
+    </div>
+  </div>
+
+  <!-- JUNE -->
+
+  <div id="june" class="habit-data">
+    <p style="text-align: left">JUNE</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Activity</th>
+          
+          <script>
+            for (let i = 1; i <= 30; i++) {
+              document.write(`<th>${i}</th>`);
+            }
+          </script>
+          <th>✅ Done</th>
+          <th>🗑️ Delete</th>
+        </tr>
+      </thead>
+      <tbody id="june-table">
+        <tr>
+          <td style="color: white">🏋️ Gym</td>
+          <script>
+            for (let i = 1; i <= 30; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td style="color: white">📖 Reading</td>
+          <script>
+            for (let i = 1; i <= 30; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="add-activity">
+      <input type="text" id="june-activity" placeholder="New Activity" />
+      <button onclick="addActivity('june')">Add Activity</button>
+    </div>
+  </div>
+
+  <!-- JULY -->
+
+  <div id="july" class="habit-data">
+    <p style="text-align: left">JULY</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Activity</th>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<th>${i}</th>`);
+            }
+          </script>
+          <th>✅ Done</th>
+          <th>🗑️ Delete</th>
+        </tr>
+      </thead>
+      <tbody id="july-table">
+        <tr>
+          <td style="color: white">🏋️ Gym</td>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td style="color: white">📖 Reading</td>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="add-activity">
+      <input type="text" id="july-activity" placeholder="New Activity" />
+      <button onclick="addActivity('july')">Add Activity</button>
+    </div>
+  </div>
+  <!-- AUGUST -->
+
+  <div id="august" class="habit-data">
+    <p style="text-align: left">AUGUST</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Activity</th>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<th>${i}</th>`);
+            }
+          </script>
+          <th>✅ Done</th>
+          <th>🗑️ Delete</th>
+        </tr>
+      </thead>
+      <tbody id="august-table">
+        <tr>
+          <td style="color: white">🏋️ Gym</td>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td style="color: white">📖 Reading</td>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="add-activity">
+      <input type="text" id="august-activity" placeholder="New Activity" />
+      <button onclick="addActivity('august')">Add Activity</button>
+    </div>
+  </div>
+
+  <!-- SEPTEMBER -->
+
+  <div id="sept" class="habit-data">
+    <p style="text-align: left">SEPTEMBER</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Activity</th>
+          <script>
+            for (let i = 1; i <= 30; i++) {
+              document.write(`<th>${i}</th>`);
+            }
+          </script>
+          <th>✅ Done</th>
+          <th>🗑️ Delete</th>
+        </tr>
+      </thead>
+      <tbody id="sept-table">
+        <tr>
+          <td style="color: white">🏋️ Gym</td>
+          <script>
+            for (let i = 1; i <= 30; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td style="color: white">📖 Reading</td>
+          <script>
+            for (let i = 1; i <= 30; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="add-activity">
+      <input type="text" id="sept-activity" placeholder="New Activity" />
+      <button onclick="addActivity('sept')">Add Activity</button>
+    </div>
+  </div>
+
+  <!-- OCTOBER -->
+
+  <div id="oct" class="habit-data">
+    <p style="text-align: left">OCTOBER</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Activity</th>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<th>${i}</th>`);
+            }
+          </script>
+          <th>✅ Done</th>
+          <th>🗑️ Delete</th>
+        </tr>
+      </thead>
+      <tbody id="oct-table">
+        <tr>
+          <td style="color: white">🏋️ Gym</td>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td style="color: white">📖 Reading</td>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="add-activity">
+      <input type="text" id="oct-activity" placeholder="New Activity" />
+      <button onclick="addActivity('oct')">Add Activity</button>
+    </div>
+  </div>
+
+  <!-- NOVEMBER -->
+  <div id="nov" class="habit-data">
+    <p style="text-align: left">NOVEMBER</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Activity</th>
+
+          <script>
+            for (let i = 1; i <= 30; i++) {
+              document.write(`<th>${i}</th>`);
+            }
+          </script>
+          <th>✅ Done</th>
+          <th>🗑️ Delete</th>
+        </tr>
+      </thead>
+      <tbody id="nov-table">
+        <tr>
+          <td style="color: white">🏋️ Gym</td>
+          <script>
+            for (let i = 1; i <= 30; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td style="color: white">📖 Reading</td>
+          <script>
+            for (let i = 1; i <= 30; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="add-activity">
+      <input type="text" id="nov-activity" placeholder="New Activity" />
+      <button onclick="addActivity('nov')">Add Activity</button>
+    </div>
+  </div>
+
+  <!-- DECEMBER -->
+  <div id="dec" class="habit-data">
+    <p style="text-align: left">DECEMBER</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Activity</th>
+
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<th>${i}</th>`);
+            }
+          </script>
+          <th>✅ Done</th>
+          <th>🗑️ Delete</th>
+        </tr>
+      </thead>
+      <tbody id="dec-table">
+        <tr>
+          <td style="color: white">🏋️ Gym</td>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td style="color: white">📖 Reading</td>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<td onclick="toggleMark(this)">❌</td>`);
+            }
+          </script>
+          <td class="count">0</td>
+          <td>
+            <button class="delete-btn" onclick="deleteActivity(this)">
+              🗑️
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="add-activity">
+      <input type="text" id="dec-activity" placeholder="New Activity" />
+      <button onclick="addActivity('dec')">Add Activity</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
